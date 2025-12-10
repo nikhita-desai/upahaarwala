@@ -46,8 +46,8 @@ export default function PolaroidGallery() {
   }, []);
 
   return (
-    <section className="py-20 px-5 bg-[#FFF7F3]">
-      <div className="container">
+    <section className="py-20 px-5 bg-[#FFF7F3] overflow-hidden">
+      <div className="container overflow-hidden">
 
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-12 text-black">
           Our Work & Deliveries
@@ -55,7 +55,7 @@ export default function PolaroidGallery() {
 
         <div
           ref={galleryRef}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 overflow-hidden"
         >
           {images.map((item, index) => (
             <div

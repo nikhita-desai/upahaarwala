@@ -60,17 +60,17 @@ export default function HomeSlider() {
         </div>
 
         {/* MAIN SLIDE */}
-        <div className="main-slide-wrapper flex-1 ml-1 mr-1 relative h-[280px] md:h-[420px] overflow-hidden rounded-md">
+        <div className="main-slide-wrapper flex-1 ml-1 mr-1 relative h-[280px] md:h-[420px] overflow-hidden rounded-2xl">
           <img
               src={slides[active].img}
               alt={slides[active].title}
               className="main-slide w-full h-full object-cover"
           />
 
-          <h2 className="absolute bottom-12 left-6 text-black text-3xl font-bold z-[5]">
+          <h2 className="absolute bottom-22 md:bottom-12 left-4 text-white text-2xl md:text-3xl font-bold z-[5]">
               {slides[active].title}
           </h2>
-          <p className="absolute bottom-6 left-6 text-black text-1xl z-[5]">
+          <p className="absolute bottom-4 md:bottom-6 left-4 text-white text-md md:text-1xl z-[5]">
             {slides[active].subtitle}
           </p>
         </div>
@@ -107,16 +107,16 @@ function Sidebar({ title, onClick }) {
   return (
     <div
       className="bg-[#222] text-white w-[40px] md:w-[50px] rounded-4xl
-      flex items-center justify-center h-[285px] md:h-[370px] cursor-pointer relative px-2 flex-col"
+      flex items-center justify-center h-[285px] md:h-[400px] cursor-pointer relative px-2 flex-col"
       onClick={onClick}
     >
-      <p className="writing-mode-vertical text-center h-[240px] h-1/2 md:h-[370px] font-bold text-xs">
+      <p className="writing-mode-vertical text-center h-[240px] h-1/2 md:h-[380px] font-bold text-xs">
         {title}
       </p>
       <img
         src="/src/assets/arrow.png"
         alt="side bar arrow"
-        className="w-6 h-6 object-cover w-10 h-1/2 group-hover:scale-105 transition duration-300"
+        className="w-8 h-6 md:h-10 object-cover w-10 h-1/2 group-hover:scale-105 transition duration-300"
       />
     </div>
   );
