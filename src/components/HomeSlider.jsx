@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 
 const slides = [
-  { title: "Celebrate the Moments That Matter", subtitle: "Make every special day unforgettable with handcrafted gifts made from the heart.", img: "/src/assets/gift1.webp" },
-  { title: "Gifts That Tell Your Story", subtitle: "Turn your memories into beautiful keepsakes with personalized frames, lamps & more.", img: "/src/assets/gift2.webp" },
-  { title: "Delivering Smiles, One Gift at a Time", subtitle: "Thoughtfully designed, beautifully packed we bring joy straight to their doorstep.", img: "/src/assets/gift3.webp" },
+  { title: "Celebrate the Moments That Matter", subtitle: "Make every special day unforgettable with handcrafted gifts made from the heart.", img: "/assets/gift1.webp" },
+  { title: "Gifts That Tell Your Story", subtitle: "Turn your memories into beautiful keepsakes with personalized frames, lamps & more.", img: "/assets/gift2.webp" },
+  { title: "Delivering Smiles, One Gift at a Time", subtitle: "Thoughtfully designed, beautifully packed we bring joy straight to their doorstep.", img: "/assets/gift3.webp" },
 ];
 
 export default function HomeSlider() {
@@ -114,7 +114,7 @@ function Sidebar({ title, onClick }) {
         {title}
       </p>
       <img
-        src="/src/assets/arrow.png"
+        src="/assets/arrow.png"
         alt="side bar arrow"
         className="w-8 h-6 md:h-10 object-cover w-10 h-1/2 group-hover:scale-105 transition duration-300"
       />

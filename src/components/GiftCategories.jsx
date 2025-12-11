@@ -6,12 +6,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function GiftCategories() {
   const categories = [
-    { name: "LOVE MAGNETS", img: "/src/assets/gift4.webp", area: "love" },
-    { name: "POPUP BOX", img: "/src/assets/gift19.jpg", area: "popup" },
-    { name: "PHOTO SCROLL", img: "/src/assets/gift3.webp", area: "scroll" },
-    { name: "FOREVER ROSE", img: "/src/assets/gift16.webp", area: "rose" },
-    { name: "PLANTS", img: "/src/assets/gift13.webp", area: "perfume" },
-    { name: "CUSTOMIZED", img: "/src/assets/gift2.webp", area: "keychain" },
+    { name: "LOVE MAGNETS", img: "/assets/gift4.webp", area: "love" },
+    { name: "POPUP BOX", img: "/assets/gift19.jpg", area: "popup" },
+    { name: "PHOTO SCROLL", img: "/assets/gift3.webp", area: "scroll" },
+    { name: "FOREVER ROSE", img: "/assets/gift16.webp", area: "rose" },
+    { name: "PLANTS", img: "/assets/gift13.webp", area: "perfume" },
+    { name: "CUSTOMIZED", img: "/assets/gift2.webp", area: "keychain" },
   ];
 
   const sectionRef = useRef(null);

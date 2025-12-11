@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       {showImage && (
         <Banner
-            image="/src/assets/banner.png"
+            image="/assets/banner.png"
             heading="Celebrate With UpahaarWala"
             subheading="Thoughtful handcrafted gifts for every occasion"
         />

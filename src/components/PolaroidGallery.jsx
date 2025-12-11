@@ -6,12 +6,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function PolaroidGallery() {
   const images = [
-    { name: "Gift Hamper", img: "/src/assets/gift1.webp" },
-    { name: "Glow LED Lamp", img: "/src/assets/gift10.webp" },
-    { name: "Sclupture Gift", img: "/src/assets/gift6.webp" },
-    { name: "Personalised Fridge magnet", img: "/src/assets/gift11.webp" },
-    { name: "Unique Photo Frame", img: "/src/assets/gift8.webp" },
-    { name: "Name LED Night Lamp", img: "/src/assets/gift9.webp" },
+    { name: "Gift Hamper", img: "/assets/gift1.webp" },
+    { name: "Glow LED Lamp", img: "/assets/gift10.webp" },
+    { name: "Sclupture Gift", img: "/assets/gift6.webp" },
+    { name: "Personalised Fridge magnet", img: "/assets/gift11.webp" },
+    { name: "Unique Photo Frame", img: "/assets/gift8.webp" },
+    { name: "Name LED Night Lamp", img: "/assets/gift9.webp" },
   ];
 
   const galleryRef = useRef(null);
