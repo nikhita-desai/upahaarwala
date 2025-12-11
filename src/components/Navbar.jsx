@@ -47,11 +47,11 @@ export default function Navbar() {
           <Link to="/contact" className="block hover:text-pink-600">Contact</Link>
           
           <a
-            href="https://wa.me/91XXXXXXXXXX"
+            href="https://api.whatsapp.com/send/?phone=919776876029&text=Hi%20UpahaarWala&type=phone_number&app_absent=0"
             target="_blank"
-            className="block text-center px-4 py=2 bg-green-500 text-white rounded-full shadow hover:bg-green-600 transition"
+            rel="noopener noreferrer"
           >
-            WhatsApp
+            Chat on WhatsApp
           </a>
         </div>
       )}
