@@ -18,7 +18,7 @@ export default function Home() {
       )}
       <AboutSection />
       <GiftCategories />
-      {/* <PolaroidGallery /> */}
+      <PolaroidGallery />
       {showVideo && (
         <Banner
           video="/banner-video.mp4"
