@@ -15,6 +15,7 @@ export default function GiftCategories() {
   ];
 
   const sectionRef = useRef(null);
+  
 
   useEffect(() => {
     const items = gsap.utils.toArray(".category-item");
