@@ -20,7 +20,7 @@ export default function Navbar() {
           <Link to="/contact" className="hover:text-pink-600">Contact</Link>
 
           <a
-            href="https://wa.me/919479800201?text=Hi%20UpahaarWala!%20%F0%9F%91%8B%20I%20want%20to%20order%20a%20gift.%20Please%20show%20me%20your%20latest%20designs."
+            href="https://wa.me/919479800201?text=Hi%20UpahaarWala"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-green-500 text-white rounded-full shadow hover:bg-green-600 decoration-0 transition"
