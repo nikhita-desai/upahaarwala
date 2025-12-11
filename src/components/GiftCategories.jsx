@@ -51,7 +51,7 @@ export default function GiftCategories() {
   return (
     <section className="py-20 px-5 bg-[#FFF7F3] overflow-hidden" ref={sectionRef}>
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center mb-12">
           Explore Our Categories
         </h2>
 

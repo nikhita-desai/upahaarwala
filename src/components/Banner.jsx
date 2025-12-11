@@ -37,12 +37,12 @@ export default function Banner({ image, heading, subheading }) {
       {/* Text content */}
       <div className="absolute container inset-0 flex flex-col items-end justify-center px-10 md:px-20 text-black">
         
-        <h1
+        <h2
           ref={headingRef}
-          className="text-2xl md:text-4xl font-bold max-w-2xl leading-tight text-right"
+          className="text-4xl md:text-6xl font-bold max-w-2xl leading-tight text-right"
         >
           {heading}
-        </h1>
+        </h2>
 
         <p
           ref={subRef}

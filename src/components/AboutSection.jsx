@@ -57,7 +57,7 @@ export default function AboutSection() {
           ref={imageRef}
           src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80"
           className="w-[350px] md:w-[450px] rounded-2xl shadow-lg"
-          alt="About UpahaarWala"
+          alt="About uphaarwala"
         />
       </div>
 
@@ -67,18 +67,18 @@ export default function AboutSection() {
           ref={titleRef}
           className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
         >
-          About UpahaarWala
+          About uphaarwala
         </h2>
 
         <p
           ref={textRef}
           className="text-gray-700 text-lg leading-relaxed"
         >
-        UpahaarWala was born from a simple belief that gifting should feel personal, heartfelt, and truly memorable.
+        uphaarwala was born from a simple belief that gifting should feel personal, heartfelt, and truly memorable.
         <br/><br/>
         Every hamper, bouquet, candle, and custom creation we craft is thoughtfully designed to carry emotion, intention, and a touch of love. Whether it’s a birthday, anniversary, festival, or just a small <b>“you matter to me!”</b> our purpose is to bring warmth and joy to your special moments.
         <br/><br/>
-        At UpahaarWala, we see a gift as more than an item it’s a feeling, a memory, and a message from the heart. We’re here to help you express that beautifully.
+        At uphaarwala, we see a gift as more than an item it’s a feeling, a memory, and a message from the heart. We’re here to help you express that beautifully.
         </p>
       </div>
     </section>

@@ -8,13 +8,13 @@ export default function About() {
       <ImageWithText
         image="/assets/gift17.webp"
         title="Crafting Joy, One Gift at a Time"
-        description="At UpahaarWala, every gift is thoughtfully handcrafted with love, care and attention to detail. From personalized keepsakes to luxury hampers, we create meaningful gifts that turn moments into memories."
+        description="At uphaarwala, every gift is thoughtfully handcrafted with love, care and attention to detail. From personalized keepsakes to luxury hampers, we create meaningful gifts that turn moments into memories."
       />
       <ImageWithText
         reverse
         image="/assets/gift14.webp"
         title="Celebrations Made Personal"
-        description="Every order at UpahaarWala is designed with your emotions in mind. Our customized gifts, creative packaging and reliable delivery ensure that your special moments feel truly special."
+        description="Every order at uphaarwala is designed with your emotions in mind. Our customized gifts, creative packaging and reliable delivery ensure that your special moments feel truly special."
       />
 
     </div>

@@ -12,7 +12,7 @@ export default function Home() {
       {showImage && (
         <Banner
             image="/assets/banner.png"
-            heading="Celebrate With UpahaarWala"
+            heading="Celebrate With uphaarwala"
             subheading="Thoughtful handcrafted gifts for every occasion"
         />
       )}
