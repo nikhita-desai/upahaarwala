@@ -39,7 +39,7 @@ export default function Banner({ image, heading, subheading }) {
         
         <h1
           ref={headingRef}
-          className="text-2xl md:text-4xl font-bold max-w-2xl leading-tight text-right"
+          className="text-2xl md:text-4xl font-bold max-w-2xl leading-tight text-left"
         >
           {heading}
         </h1>
