@@ -1,8 +1,9 @@
+import ContactSection from "../components/ContactSection";
+
 export default function Contact() {
   return (
     <div>
-      <h2>Contact Us</h2>
-      <p>Email: support@niqora.com</p>
+      <ContactSection />
     </div>
   );
 }

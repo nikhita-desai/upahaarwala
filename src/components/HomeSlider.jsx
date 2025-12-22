@@ -32,7 +32,7 @@ export default function HomeSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
-    }, 32000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
