@@ -33,7 +33,7 @@ export default function ContactSection() {
             </p>
 
             <a
-              href="https://api.whatsapp.com/send/?phone=919776876029&text=Hi%20UpahaarWala&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=919776876029&text=Hi%20UpahaarWala"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 
