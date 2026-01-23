@@ -106,3 +106,18 @@ div[style*="grid-area: perfume"] {
 div[style*="grid-area: keychain"] {
   grid-area: keychain;
 }
+.wave-mask {
+  clip-path: path("M0 0H100V0Q50 0 0 0Z");
+}
+.liquid-wrapper svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.liquid-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+}

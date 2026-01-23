@@ -2,6 +2,7 @@ import Banner from "../components/Banner";
 import AboutSection from "../components/AboutSection";
 import GiftCategories from "../components/GiftCategories";
 import PolaroidGallery from "../components/PolaroidGallery";
+import AttitudeSection from "../components/AttitudeSection";
 
 export default function Home() {
   const showImage = true;   // change this based on upload
@@ -16,6 +17,7 @@ export default function Home() {
             subheading="Thoughtful handcrafted gifts for every occasion"
         />
       )}
+      <AttitudeSection />
       <AboutSection />
       <GiftCategories />
       <PolaroidGallery />
