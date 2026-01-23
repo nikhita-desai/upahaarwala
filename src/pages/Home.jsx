@@ -2,6 +2,7 @@ import Banner from "../components/Banner";
 import AboutSection from "../components/AboutSection";
 import GiftCategories from "../components/GiftCategories";
 import PolaroidGallery from "../components/PolaroidGallery";
+import AttitudeSection from "../components/AttitudeSection";
 
 export default function Home() {
   const showImage = true;   // change this based on upload
@@ -21,9 +22,10 @@ export default function Home() {
       <PolaroidGallery />
       {showVideo && (
         <Banner
-          video="/banner-video.mp4"
+        video="/banner-video.mp4"
         />
       )}
+      <AttitudeSection />
     </div>
   );
 }
