@@ -17,15 +17,15 @@ export default function Home() {
             subheading="Thoughtful handcrafted gifts for every occasion"
         />
       )}
-      <AttitudeSection />
       <AboutSection />
       <GiftCategories />
       <PolaroidGallery />
       {showVideo && (
         <Banner
-          video="/banner-video.mp4"
+        video="/banner-video.mp4"
         />
       )}
+      <AttitudeSection />
     </div>
   );
 }

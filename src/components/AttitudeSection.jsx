@@ -9,32 +9,27 @@ export default function AttitudeSection() {
     {
       label: "Made With Care",
       title: "Discipline",
-      description: "At our core, we are disciplined professionals.",
-      position: "top",
+      description: "Every gift is crafted with precision and attention to detail.",
     },
     {
       label: "Built On Trust",
       title: "Trust",
-      description: "We build trust through honest decisions.",
-      position: "bottom",
+      description: "Thousands trust us to deliver emotions, not just products.",
     },
     {
       label: "Crafted With Heart",
       title: "Passion",
-      description: "Every project gets our full passion.",
-      position: "top",
+      description: "We pour heart and creativity into everything we create.",
     },
     {
       label: "Committed To You",
       title: "Devotion",
-      description: "We stay devoted until perfection.",
-      position: "bottom",
+      description: "Your moments matter to us as much as they matter to you.",
     },
     {
       label: "Our Promise",
       title: "Promise",
-      description: "Our promise is thoughtful execution.",
-      position: "top",
+      description: "Thoughtful gifting, delivered exactly the way you imagine.",
     },
   ];
 
@@ -51,38 +46,70 @@ export default function AttitudeSection() {
       setProgress(Math.min(1, Math.max(0, raw)));
     };
 
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+
     window.addEventListener("scroll", onScroll);
-    window.addEventListener("resize", () => setIsMobile(window.innerWidth < 768));
+    window.addEventListener("resize", onResize);
     onScroll();
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   /* ---------------- COLOR ---------------- */
-  const color = `rgb(
-    ${Math.round(59 + (239 - 59) * progress)},
-    ${Math.round(130 + (68 - 130) * progress)},
-    ${Math.round(246 + (68 - 246) * progress)}
-  )`;
+  /* ---------------- SOFT BLUE → BLACK TEXT COLOR ---------------- */
 
-  /* ---------------- HELPERS ---------------- */
+  const shades = [
+    { r: 226, g: 232, b: 255 }, // very light blue
+    { r: 191, g: 219, b: 254 }, // soft sky blue
+    { r: 147, g: 197, b: 253 }, // blue
+    { r: 96,  g: 165, b: 250 }, // deeper blue
+    { r: 59,  g: 130, b: 246 }, // strong blue
+    { r: 30,  g: 64,  b: 175 }, // navy
+    { r: 20,  g: 40,  b: 60 },  // almost black
+  ];
+
   const lerp = (a, b, t) => a + (b - a) * t;
 
-  // 🔒 FINAL STACK POSITIONS (YOUR DOM)
-  const FINAL_Y = [0, 40, 69, 108, 149];
+  const getColor = (progress) => {
+    const steps = shades.length - 1;
+    const scaled = progress * steps;
+    const index = Math.floor(scaled);
+    const t = scaled - index;
+
+    const c1 = shades[index];
+    const c2 = shades[index + 1] || c1;
+
+    return `rgb(
+      ${Math.round(lerp(c1.r, c2.r, t))},
+      ${Math.round(lerp(c1.g, c2.g, t))},
+      ${Math.round(lerp(c1.b, c2.b, t))}
+    )`;
+  };
+
+  const color = getColor(progress);
+
+  // MOBILE FINAL POSITIONS
+  const FINAL_Y = [0, 60, 120, 180, 240];
   const START_Y = 180;
 
   return (
-    <section ref={sectionRef} className="relative bg-slate-900" style={{ height: "300vh" }}>
+    <section
+      ref={sectionRef}
+      className="relative bg-slate-100"
+      style={{ height: "300vh" }}
+    >
       <div className="sticky top-0 h-screen overflow-hidden">
 
         {/* ATTITUDE TEXT */}
-        <div className="absolute inset-0 flex items-start justify-center md:items-center pointer-events-none pt-40 md:pt-0">
+        <div className="absolute inset-0 flex items-start md:items-center justify-center pointer-events-none pt-40 md:pt-0">
           <h2
             className="uppercase font-extrabold tracking-tight select-none"
-            style={{ fontSize: "clamp(4rem,18vw,20rem)", color }}
+            style={{ fontSize: "clamp(1rem,14vw,16rem)",  color, transition: "color 0.12s linear" }}
           >
-            {"attitude".split("").map((l, i) => {
+            {"uphaarwala".split("").map((letter, i) => {
               const lp = Math.max(0, Math.min(1, (progress - i * 0.08) * 8));
               return (
                 <span
@@ -93,19 +120,49 @@ export default function AttitudeSection() {
                     transform: `translateY(${(1 - lp) * 80}px)`,
                   }}
                 >
-                  {l}
+                  {letter}
                 </span>
               );
             })}
           </h2>
         </div>
 
-        {/* MOBILE STACK (FIXED) */}
+        {/* ---------------- DESKTOP CARDS ---------------- */}
+        {!isMobile && (
+          <div className="absolute inset-0 flex items-center">
+            <div
+              className="flex gap-20 px-[10vw]"
+              style={{
+                transform: `translateX(-${progress * 800}px)`,
+                transition: "transform 0.1s linear",
+              }}
+            >
+              {rules.map((rule, i) => {
+                const cp = Math.max(0, Math.min(1, (progress - i * 0.15) * 5));
+                return (
+                  <div
+                    key={i}
+                    className={`w-80 flex-shrink-0 ${
+                      i % 2 === 0 ? "-mt-32" : "mt-32"
+                    }`}
+                    style={{
+                      opacity: cp,
+                      transform: `translateY(${(1 - cp) * 60}px) scale(${0.9 + cp * 0.1})`,
+                    }}
+                  >
+                    <Card rule={rule} />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* ---------------- MOBILE STACK ---------------- */}
         {isMobile && (
           <div className="absolute inset-0 flex items-center justify-center">
             {rules.map((rule, i) => {
               const cp = Math.max(0, Math.min(1, (progress - i * 0.14) * 4));
-
               const y = lerp(START_Y, FINAL_Y[i], cp);
 
               return (
@@ -116,7 +173,6 @@ export default function AttitudeSection() {
                     opacity: cp,
                     transform: `translateY(${y}px) scale(1)`,
                     zIndex: i,
-                    transition: "transform 0.08s linear, opacity 0.08s linear",
                   }}
                 >
                   <Card rule={rule} />
@@ -125,6 +181,7 @@ export default function AttitudeSection() {
             })}
           </div>
         )}
+
       </div>
     </section>
   );
@@ -133,9 +190,9 @@ export default function AttitudeSection() {
 /* ---------------- CARD ---------------- */
 function Card({ rule }) {
   return (
-    <article className="bg-slate-800/80 backdrop-blur-md rounded-2xl p-6 shadow-xl">
+    <article className="bg-slate-600/80 backdrop-blur-md rounded-2xl p-6 shadow-xl">
       <div className="flex items-center gap-2 mb-4">
-        <span className="text-xs text-pink-400 uppercase tracking-wider font-semibold">
+        <span className="text-xs text-white-400 uppercase tracking-wider font-semibold">
           {rule.label}
         </span>
       </div>
