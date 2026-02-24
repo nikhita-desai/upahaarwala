@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 
 function ShortSlide({ id }) {
@@ -14,7 +14,6 @@ function ShortSlide({ id }) {
           allow="autoplay; encrypted-media"
           allowFullScreen
         />
-        {/* Blocks iframe from stealing touch events during swipe */}
         {!active && (
           <div
             className="absolute inset-0 z-10 cursor-pointer"
@@ -27,32 +26,47 @@ function ShortSlide({ id }) {
 }
 
 export default function YouTubeShortsSlider({ shorts }) {
-  const settings = {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const mobileSettings = {
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    swipe: true,
+    touchMove: true,
+    centerMode: false,
+  };
+
+  const desktopSettings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
-    swipe: true,
-    touchMove: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
-      },
-    ],
+    swipe: false,
+    touchMove: false,
+    centerMode: false,
   };
 
+  const settings = isMobile ? mobileSettings : desktopSettings;
+
   return (
-    <div className="w-full px-3 bg-[#FFF7F3]">
+    <div className="w-full px-3 md:px-8 py-12 bg-[#FFF7F3]">
       <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center mb-12">
         Our Gifts, Your Ways!
       </h2>
+
       <Slider {...settings}>
         {shorts.map((id) => (
           <ShortSlide key={id} id={id} />
