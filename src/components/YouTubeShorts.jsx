@@ -27,26 +27,24 @@ function ShortSlide({ id }) {
 }
 
 export default function YouTubeShortsSlider({ shorts }) {
-  const settings = {
+    const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 1, // ✅ mobile default
     slidesToScroll: 1,
     arrows: true,
-    swipe: true,
-    touchMove: true,
     responsive: [
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-      {
-        breakpoint: 1024,
+        {
+        breakpoint: 768, // ≥768
         settings: { slidesToShow: 2 },
-      },
+        },
+        {
+        breakpoint: 1024, // ≥1024
+        settings: { slidesToShow: 4 },
+        },
     ],
-  };
+    };
 
   return (
     <div className="w-full px-3 bg-[#FFF7F3]">
