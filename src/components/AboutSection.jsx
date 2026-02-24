@@ -49,7 +49,7 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="container w-full py-20 px-5 md:px-20 bg-[#FFF7F3] flex flex-col md:flex-row items-center gap-12"
+      className="container w-full py-16 px-5 md:px-20 bg-[#FFF7F3] flex flex-col md:flex-row items-center gap-12"
     >
       {/* Left Image */}
       <div className="w-full md:w-1/2 flex justify-center">

@@ -16,7 +16,7 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
           className="text-2xl font-bold text-pink-600"
         >
-          uphaarwala
+          Uphaarwala
         </Link>
 
         {/* DESKTOP MENU */}

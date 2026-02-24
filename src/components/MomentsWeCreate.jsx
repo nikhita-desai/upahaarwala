@@ -10,7 +10,7 @@ export default function MomentsWeCreate() {
   ];
 
   return (
-    <section className="bg-white py-20 px-6">
+    <section className="bg-white py-16 px-6">
       <div className="max-w-6xl mx-auto">
 
         <h2 className="text-3xl md:text-5xl font-bold mb-14 text-gray-900">

@@ -46,7 +46,7 @@ export default function PolaroidGallery() {
   }, []);
 
   return (
-    <section className="py-20 px-5 bg-[#FFF7F3] overflow-hidden">
+    <section className="py-16 px-5 bg-[#FFF7F3] overflow-hidden">
       <div className="container overflow-hidden">
 
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-12 text-black">
