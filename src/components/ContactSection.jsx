@@ -44,7 +44,7 @@ export default function ContactSection() {
 
           </div>
         </div>
-
+        <img src="/assets/contactus.png" alt="Banner" className="w-full h-full object-cover [image-rendering:optimizeQuality]"/>
         {/* CONTACT FORM */}
         <div className="bg-[#cccccc63] p-8 rounded-2xl shadow hidden">
           <h3 className="text-2xl font-bold text-black font-bold mb-6">Send us a message</h3>
@@ -92,7 +92,6 @@ export default function ContactSection() {
             </form>
         </div>
       </div>
-      <img src="/assets/contactus.png" alt="Banner" className="w-full h-full object-cover [image-rendering:optimizeQuality]"/>
     </section>
   );
 }

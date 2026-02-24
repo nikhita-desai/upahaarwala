@@ -2,7 +2,7 @@ import Banner from "../components/Banner";
 import AboutSection from "../components/AboutSection";
 import GiftCategories from "../components/GiftCategories";
 import PolaroidGallery from "../components/PolaroidGallery";
-import AttitudeSection from "../components/AttitudeSection";
+import YouTubeShortsSlider from "../components/YouTubeShorts";
 
 export default function Home() {
   const showImage = true;   // change this based on upload
@@ -18,14 +18,19 @@ export default function Home() {
         />
       )}
       <AboutSection />
+      <YouTubeShortsSlider
+        shorts={[
+          "4mKGNqT9wtI",
+          "2vHmVSpufWI",
+          "g-W-mBOPWU0",
+          "3NPTnLN916E",
+          "3lt0wy1Of9c",
+          "uuOiMDxsUbQ",
+          "rqo7IL1bQrU",
+        ]}
+      />
       <GiftCategories />
       <PolaroidGallery />
-      {showVideo && (
-        <Banner
-        video="/banner-video.mp4"
-        />
-      )}
-      <AttitudeSection />
     </div>
   );
 }
