@@ -3,6 +3,7 @@ import AboutSection from "../components/AboutSection";
 import GiftCategories from "../components/GiftCategories";
 import PolaroidGallery from "../components/PolaroidGallery";
 import YouTubeShortsSlider from "../components/YouTubeShorts";
+import BudgetSection from "../components/BudgetSection";
 
 export default function Home() {
   const showImage = true;   // change this based on upload
@@ -29,6 +30,7 @@ export default function Home() {
           "rqo7IL1bQrU",
         ]}
       />
+      <BudgetSection />
       <GiftCategories />
       <PolaroidGallery />
     </div>

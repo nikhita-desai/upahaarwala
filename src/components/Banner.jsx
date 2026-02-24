@@ -26,7 +26,7 @@ export default function Banner({ image, video, heading, subheading }) {
   }, []);
 
   return (
-    <section className="w-full h-[65vh] relative overflow-hidden">
+    <section className="w-full h-[65vh] relative overflow-hidden bg-[#FFF7F3]">
       
       {/* Background */}
       {video ? (
