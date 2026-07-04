@@ -32,7 +32,7 @@ export default function Navbar() {
 
           {!isContactPage ? (
             <a
-              href="https://api.whatsapp.com/send/?phone=919776876029&text=Hi%20UpahaarWala"
+              href="https://api.whatsapp.com/send/?phone=917067777023&text=Hi%20UpahaarWala"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-green-500 text-white rounded-full shadow hover:bg-green-600 transition"
@@ -86,7 +86,7 @@ export default function Navbar() {
 
           {!isContactPage ? (
             <a
-              href="https://api.whatsapp.com/send/?phone=919776876029&text=Hi%20UpahaarWala"
+              href="https://api.whatsapp.com/send/?phone=917067777023&text=Hi%20UpahaarWala"
               target="_blank"
               rel="noopener noreferrer"
               onClickufClick={() => setOpen(false)}

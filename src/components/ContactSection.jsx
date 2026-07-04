@@ -20,8 +20,8 @@ export default function ContactSection() {
 
             <p>
               <strong>📞 Phone:</strong>{" "}
-              <a href="tel:+919776876029" className="text-blue-600 underline">
-                +91 97768 76029
+              <a href="tel:+917067777023" className="text-blue-600 underline">
+                +91 7067777023
               </a>
             </p>
 
@@ -33,7 +33,7 @@ export default function ContactSection() {
             </p>
 
             <a
-              href="https://api.whatsapp.com/send/?phone=919776876029&text=Hi%20UpahaarWala"
+              href="https://api.whatsapp.com/send/?phone=917067777023&text=Hi%20UpahaarWala"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 
